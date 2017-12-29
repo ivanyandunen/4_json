@@ -12,6 +12,9 @@ Example of script launch on Linux, Python 3.5:
 
 $ python pprint_json.py <path to file>
 
+
+Output example:
+
 [
   {
     "AdmArea": "Северный административный округ",
