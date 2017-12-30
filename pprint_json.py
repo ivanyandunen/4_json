@@ -4,14 +4,16 @@ import sys
 
 def load_data(filepath):
     with open(filepath) as jsfile:
-        data = json.load(jsfile)
-    return data
+        jsfile_content = json.load(jsfile)
+    return jsfile_content
 
 
-def pretty_print_json(data):
-    print(json.dumps(data, sort_keys=True, indent=4, ensure_ascii=False))
+def pretty_print_json(jsfile_content):
+    print(json.dumps(jsfile_content, sort_keys=True,
+                     indent=4, ensure_ascii=False))
 
 
 if __name__ == '__main__':
-    data = load_data(sys.argv[1])
-    pretty_print_json(data)
+    jsfile_content = load_data(sys.argv[1])
+    pretty_print_json(jsfile_content)
+
